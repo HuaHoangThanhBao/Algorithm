@@ -1,0 +1,6 @@
+E:\Algorithm\Training\Training\bin\Debug\Training.exe.config
+E:\Algorithm\Training\Training\bin\Debug\Training.exe
+E:\Algorithm\Training\Training\bin\Debug\Training.pdb
+E:\Algorithm\Training\Training\obj\Debug\Training.csprojAssemblyReference.cache
+E:\Algorithm\Training\Training\obj\Debug\Training.exe
+E:\Algorithm\Training\Training\obj\Debug\Training.pdb
