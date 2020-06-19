@@ -128,8 +128,20 @@ namespace Training
             //Console.WriteLine(v.IsAnagram("rat", "car"));
             //Console.WriteLine(v.IsAnagram("anagram", "nagaram"));
 
-            UglyNumber u = new UglyNumber();
-            Console.WriteLine(u.IsUgly(2));
+            //UglyNumber u = new UglyNumber();
+            //Console.WriteLine(u.IsUgly(2));
+
+            //RotateArray r = new RotateArray();
+            //int [] nums = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            //int k = 3;
+            //r.Rotate(nums, k);
+
+            //AddDigits a = new AddDigits();
+            //Console.WriteLine(a.AddDigit(38));
+
+            MissingNumber m = new MissingNumber();
+            int [] nums = new int[] { 2 };
+            Console.WriteLine(m.MissingNumbers(nums));
         }
     }
 }

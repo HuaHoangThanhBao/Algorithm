@@ -35,12 +35,12 @@ namespace Training
                     divide = 5;
                 }
 
-                if (divide != 0)
+                if (divide != 0)//Nếu số num ở trên trong 1 vòng lặp chia hết cho 1 trong 3 số: 2,3,5 thì tiếp tục
                 {
                     num /= divide;
                     divide = 0;
                 }
-                else
+                else//Ngược lại thì break và đưa ra kết luận
                 {
                     found = false;
                     break;
