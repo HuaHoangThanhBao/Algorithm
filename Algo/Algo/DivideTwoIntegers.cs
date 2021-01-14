@@ -8,32 +8,42 @@ namespace Algo
 {
     public class DivideTwoIntegers
     {
-        public int Divide(int dividend, int divisor)
-        {
-            int count = 0;
-            int num = 1;
+		//Bài hơi khó (medium)
+		public int Divide(int dividend, int divisor)
+		{
+			//corner cases, overflow
+			if (dividend == int.MinValue && divisor == -1) return int.MaxValue;
 
-            int left = Math.Abs(dividend);
-            int right = Math.Abs(divisor);
+			return LongDivision(dividend, divisor);
+		}
 
-            if (left < right) return 0;
-            else if (left == right)
-            {
-                if ((dividend < 0 && divisor < 0) || (dividend > 0 && divisor > 0))
-                    return 1;
-                else return -1;
-            }
+		public int LongDivision(long dividend, long divisor)
+		{
+			var divd = Math.Abs(dividend);
+			var divr = Math.Abs(divisor);
 
-            while (num < left)
-            {
-                count++;
-                num = right * count;
-                if (num + right > left) break;
-            }
+			var result = 0;
+			while (divd >= divr)
+			{
+				var temp = 1;
 
-            if ((dividend < 0 && divisor < 0) || (dividend > 0 && divisor > 0))
-                return count;
-            else return -count;
-        }
-    }
+				while (divd >= (divr << 1))
+				{
+					divr = divr << 1;
+					temp = temp << 1;
+				}
+
+				divd -= divr;
+				divr = Math.Abs(divisor);
+
+				result += temp;
+			}
+
+			var isNegative = (dividend >= 0 ^ divisor >= 0);
+
+			if (isNegative) result = -result;
+
+			return result;
+		}
+	}
 }

@@ -44,6 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="3Sum.cs" />
+    <Compile Include="ArrayPartition.cs" />
+    <Compile Include="Implement_Str.cs" />
+    <Compile Include="RomanToInteger.cs" />
+    <Compile Include="ThirdMaximumNumber.cs" />
     <Compile Include="_AddStrings.cs" />
     <Compile Include="Arranging_Coins.cs" />
     <Compile Include="DivideTwoIntegers.cs" />
@@ -73,6 +77,8 @@
     <Compile Include="WordPatterns.cs" />
     <Compile Include="_3SumCloset.cs" />
     <Compile Include="_AddToArrayForm.cs" />
+    <Compile Include="_BuddyString.cs" />
+    <Compile Include="_MajorityElement.cs" />
     <Compile Include="_RepeatedSubstringPattern.cs" />
   </ItemGroup>
   <ItemGroup>

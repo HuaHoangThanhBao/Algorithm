@@ -66,7 +66,8 @@ namespace Algo
             //Console.WriteLine(l.LengthOfLongestSubstring("pwwkew"));
 
             //DivideTwoIntegers d = new DivideTwoIntegers();
-            //Console.WriteLine(d.Divide(-2147483648, 1));
+            //Console.WriteLine(d.Divide(2147483647, 154));
+            //2147483647
 
             //Find_First__And_Last_Position_Of_Element_In_Sorted_Array f = new Find_First__And_Last_Position_Of_Element_In_Sorted_Array();
             //f.SearchRange(new int[] { 5, 7, 7, 8, 8, 10 }, 6);
@@ -85,10 +86,7 @@ namespace Algo
             //Next_Greater_Element n = new Next_Greater_Element();
             //int[] nums1 = new int[] { 4, 1, 2 };
             //int[] nums2 = new int[] { 1, 2, 3, 4 };
-            //foreach(var item in n.NextGreaterElement(nums1, nums2))
-            //{
-            //    Console.WriteLine(item);
-            //}
+            //n.NextGreaterElement(nums1, nums2);
 
             //_AddString a = new _AddString();
             //Console.WriteLine(a.AddStrings("9000009", "1111111"));
@@ -111,11 +109,23 @@ namespace Algo
             //_AddStrings a = new _AddStrings();
             //Console.WriteLine(a.AddStrings("9", "99"));
 
-            _AddToArrayForm a = new _AddToArrayForm();
-            foreach (var item in a.AddToArrayForm(new int[] { 9, 9, 9, 9, 9, 9, 9 }, 1))
-            {
-                Console.WriteLine(item);
-            }
+            //_AddToArrayForm a = new _AddToArrayForm();
+            //foreach (var item in a.AddToArrayForm(new int[] { 9, 9, 9, 9, 9, 9, 9 }, 1))
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //ThirdMaximumNumber th = new ThirdMaximumNumber();
+            //Console.WriteLine(th.ThirdMax(new int[] { 3, 2, 1, 0, -1, 4 }));
+
+            //Implement_Str i = new Implement_Str();
+            //Console.WriteLine(i.StrStr("hello", "ll"));
+
+            //_MajorityElement m = new _MajorityElement();
+            //Console.WriteLine(m.MajorityElement(new int[] { 2, 2, 1, 1, 1, 2, 2 }));
+
+            RomanToInteger r = new RomanToInteger();
+            Console.WriteLine(r.RomanToInt("MCMXCIV"));
         }
     }
 }

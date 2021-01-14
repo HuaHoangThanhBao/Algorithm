@@ -8,25 +8,28 @@ namespace Algo
 {
     public class Next_Greater_Element
     {
+        //Bài khó
         public int[] NextGreaterElement(int[] nums1, int[] nums2)
         {
-            //Chưa giải xong bài này
-            int cur = 0;
-            int next_index = 0;
-            int cur_index = 0;
-            for (int i = 0; i < nums1.Length; i++)
+            var outputArr = new int[nums1.Length];
+            var calcDict = new Dictionary<int, int>();
+            var myStack = new Stack<int>();
+            for (int i = nums2.Length - 1; i >= 0; i--)
             {
-                cur_index = nums2.ToList().IndexOf(nums1[i]);
-                next_index = cur_index + 1;
-                if (next_index < nums2.Length)
+                while (myStack.Count > 0 && nums2[i] > myStack.Peek())
                 {
-                    if (nums2[next_index] > nums1[i])
-                        nums1[i] = nums2[next_index];
-                    else nums1[i] = -1;
+                    myStack.Pop();
                 }
-                else nums1[i] = -1;
+                calcDict.Add(nums2[i], myStack.Count > 0 ? myStack.Peek() : -1);
+                myStack.Push(nums2[i]);
             }
-            return nums1;
+            int j = 0;
+            foreach (int num in nums1)
+            {
+                outputArr[j] = calcDict[num];
+                j++;
+            }
+            return outputArr;
         }
     }
 }

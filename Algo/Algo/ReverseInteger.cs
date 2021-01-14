@@ -10,27 +10,18 @@ namespace Algo
     {
         public int Reverse(int x)
         {
-            if (x == 0) return 0;
+            if (x >= Int32.MaxValue) return 0;
+            if (x <= Int32.MinValue) return 0;
 
-            int mod = Math.Abs(x);
-            if (mod < Int32.MinValue || mod > Int32.MaxValue - 1) return 0;
-
-            int result = 0;
-            int pos = mod.ToString().Length;
-
-            while(mod != 0)
+            double result = 0, length = 0;
+            while (x != 0)
             {
-                if (mod / 10 != 0)
-                    result += (mod % 10) * Convert.ToInt32((Math.Pow(10, pos - 1)));
-                else result += mod % 10;
-
-                pos--;
-                mod /= 10;
+                length = Math.Abs(x).ToString().Length - 1;
+                result += (x % 10) * (Math.Pow(10, length));
+                x /= 10;
             }
 
-            if (x > 0)
-                return result;
-            else return -result;
+            return ((int)result == int.MaxValue || (int) result == int.MinValue)? 0: (int)(result);
         }
     }
 }
